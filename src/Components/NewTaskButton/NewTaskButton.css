@@ -1,0 +1,15 @@
+button {
+    padding-right: 10px;
+    border-radius: 20px;
+    border: none;
+    padding: 15px 40px;
+    background-color: #c276f5;
+    font-weight: 900;
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#plusSign {
+    padding-right: 10px;
+}

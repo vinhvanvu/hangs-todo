@@ -1,12 +1,13 @@
 import Navbar from '../Components/Navbar/Navbar';
+import TodoList from '../Components/TodoList/TodoList.jsx';
 import './App.css';
 
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello Baby</h1>
       <Navbar />
+      <TodoList />
     </div>
   );
 }
