@@ -1,3 +1,6 @@
 .ToDoListBody {
-    margin-top: 30px;
+    margin-top: 27px;
+    background-color: #fff;
+    padding: 20px 45px 35px 45px;
+    box-shadow: 0 0 12px 9px #DCE2F3;
 }

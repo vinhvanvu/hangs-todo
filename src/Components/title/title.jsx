@@ -1,4 +1,4 @@
-import './title.css';
+import './Title.css';
 
 export default function Title() {
     return (<h1 className='title'>Website todo</h1>)

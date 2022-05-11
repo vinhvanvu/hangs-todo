@@ -1,6 +1,7 @@
-import './Navbar.css';
+
 import Hamburger from '../Hamburger/Hamburger.jsx';
-import Title from '../title/title.jsx';
+import Title from '../Title/Title.jsx';
+import './Navbar.css';
 
 export default function Navbar() {
     return (

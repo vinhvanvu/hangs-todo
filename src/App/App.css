@@ -1,7 +1,7 @@
 .App {
-    color: #fff;
-    font-size: 20px;
-    font-family:'Courier New', Courier, monospace;
-    padding: 15px;
-    margin: 10px;
+    margin: 200px;
+    width: 50%;
+    height: 80%;
+    max-width: 400px;
+    max-height: 550px;
 }
