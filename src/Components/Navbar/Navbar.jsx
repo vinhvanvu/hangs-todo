@@ -1,5 +1,8 @@
-import './Navbar.css'
+import Hamburger from '../Hamburger/Hamburger.jsx';
+import './Navbar.css';
 
 export default function Navbar() {
-    return (<h1>Navbar placeholder</h1>)
+    return (
+        <Hamburger />
+    )
 }
