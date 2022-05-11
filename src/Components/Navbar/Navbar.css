@@ -1,0 +1,14 @@
+.Navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    background-color: #AF7EEB;
+    padding: 5px 20px;
+}
+
+h1 {
+    font-size: 1.25rem;
+    padding: 0px 130px;
+}
