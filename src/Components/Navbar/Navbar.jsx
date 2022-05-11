@@ -3,6 +3,10 @@ import './Navbar.css';
 
 export default function Navbar() {
     return (
-        <Hamburger />
+        <div className='navbar'>
+            <Hamburger />
+            <h1>Website todo</h1>
+            <div></div>
+        </div>
     )
 }
