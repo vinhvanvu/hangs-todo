@@ -1,0 +1,13 @@
+.new-task-button {
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: #AF7EEB;
+    border: 1px solid #AF7EEB;
+    padding: 12px 30px;
+    border-radius: 23px;
+}
+
+#plus-sign {
+    padding-right: 10px;
+}
