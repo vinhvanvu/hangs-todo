@@ -1,3 +1,9 @@
 .todo-list {
     margin-top: 15px;
 }
+
+#trashcan {
+    color: gray;
+    font-size: 22px;
+    font-weight: 500;
+}
