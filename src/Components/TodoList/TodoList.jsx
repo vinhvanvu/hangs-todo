@@ -15,7 +15,7 @@ export default function TodoList() {
     return (
         <div className='todo-list'>
             <Checkbox onClick={handleChecked} checked={Checked}/>
-            <FontAwesomeIcon id='trashcan' icon={faTrashCan} />
+            <FontAwesomeIcon className='trashcan' icon={faTrashCan} />
             <NewTaskButton />
         </div>
     )
