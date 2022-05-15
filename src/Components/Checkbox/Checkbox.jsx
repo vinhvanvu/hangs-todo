@@ -5,7 +5,7 @@ import './Checkbox.css';
 
 export default function Checkbox(props) {
     return (
-        <div onClick={props.onClick}>
+        <div onClick={props.onClick} id='checkbox'>
             {props.checked ? <FontAwesomeIcon icon={faCircleCheck} />:< FontAwesomeIcon icon={faCircle} />}
         </div>
     )

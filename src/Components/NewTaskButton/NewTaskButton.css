@@ -1,6 +1,7 @@
 .new-task-button {
     color: #fff;
     font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     background-color: #AF7EEB;
     border: 1px solid #AF7EEB;
@@ -10,5 +11,5 @@
 }
 
 #plus-sign {
-    padding-right: 10px;
+    padding-right: 5px;
 }

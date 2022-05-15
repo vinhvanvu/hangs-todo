@@ -12,9 +12,9 @@ export default function TodoList() {
     }
     
     return (
-        <div>
-            <NewTaskButton />
+        <div className='todo-list'>
             <Checkbox onClick={handleChecked} checked={Checked}/>
+            <NewTaskButton />
         </div>
     )
 }
