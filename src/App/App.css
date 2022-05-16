@@ -1,4 +1,11 @@
 .app {
-    margin: 200px 0px;
-    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.Navbar-TodoList-container {
+    width: 420px;
 }
