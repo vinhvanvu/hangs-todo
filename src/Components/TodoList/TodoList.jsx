@@ -1,5 +1,6 @@
-import NewTaskButton from '../NewTaskButton/NewTaskButton.jsx';
 import Checkbox from '../Checkbox/Checkbox.jsx';
+import TodoListItem from '../TodoListItem/TodoListItem.jsx';
+import NewTaskButton from '../NewTaskButton/NewTaskButton.jsx';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
@@ -14,9 +15,20 @@ export default function TodoList() {
     }    
     return (
         <div className='todo-list'>
-            <Checkbox onClick={handleChecked} checked={Checked}/>
-            <FontAwesomeIcon className='trashcan' icon={faTrashCan} />
-            <NewTaskButton />
+            <div className='todo-list-upper'>
+                <div className='todo-list-right'>
+                    <Checkbox onClick={handleChecked} checked={Checked}/>
+                    <TodoListItem className='todo-list-item' onClick={handleChecked}
+                        style={{
+                            textDecoration: Checked ? 'line-through' : 'none'
+                        }}
+                    />
+                </div>
+                <FontAwesomeIcon className='trashcan' icon={faTrashCan} />
+            </div>
+            <div className='todo-list-bottom'>
+                <NewTaskButton />
+            </div>
         </div>
     )
 }
