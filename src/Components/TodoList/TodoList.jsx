@@ -10,7 +10,9 @@ import './TodoList.css';
 
 export default function TodoList() {
     const [Checked, setChecked] = useState(false);    
-    const handleChecked = () => {    
+    const handleChecked = () => { 
+        // Checked ? false : true - reasonable
+        // Checked ? true : false - bad
         setChecked(!Checked)
     }    
     return (

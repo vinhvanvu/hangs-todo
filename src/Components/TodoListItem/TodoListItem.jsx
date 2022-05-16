@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRulerHorizontal } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import './TodoListItem.css';
 
