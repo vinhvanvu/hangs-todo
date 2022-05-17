@@ -2,28 +2,12 @@
     margin-top: 25px;
 }
 
-.trashcan {
-    color: gray;
-    font-size: 22px;
-}
-
-.todo-list-upper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px;
-}
-
-.todo-list-right {
-    display: flex;
-    align-items: center;
-}
-
-.todo-list-item {
-    padding-left: 20px;
-}
-
 .todo-list-bottom {
+    display: flex;
+    justify-content: center;
+}
+
+.button-container {
     display: flex;
     justify-content: center;
 }
