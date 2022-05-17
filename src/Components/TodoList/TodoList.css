@@ -1,8 +1,13 @@
 .todo-list {
-    margin-top: 15px;
+    margin-top: 25px;
 }
 
-.trashcan {
-    color: gray;
-    font-size: 22px;
+.todo-list-bottom {
+    display: flex;
+    justify-content: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
 }
