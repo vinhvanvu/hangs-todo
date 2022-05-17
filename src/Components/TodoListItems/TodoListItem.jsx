@@ -1,30 +1,23 @@
-import { useState } from 'react';
 import Checkbox from '../Checkbox/Checkbox.jsx';
 import TodoListItemText from '../TodoListItemText/TodoListItemText.jsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFontAwesome, faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import './TodoListItem.css';
 
-export default function TodoListItem() {
-    const [Checked, setChecked] = useState(false);
-
-    const handleChecked = () => {
-        setChecked(!Checked)
-    }
-
+export default function TodoListItem(props) {
     return (
         <div className='todo-list-item'>
             <div className='todo-list-item-right'>
-                <Checkbox className='checkbox' onClick={handleChecked} checked={Checked}/>
-                <TodoListItemText onClick={handleChecked}
+                <Checkbox className='checkbox' onClick={props.onClick} checked={props.checked}/>
+                <TodoListItemText onClick={props.onClick} name={props.name}
                     style={{
-                        textDecoration: Checked ? 'line-through' : 'none'
+                        textDecoration: props.checked ? 'line-through' : 'none'
                     }}
                 />
             </div>
             <FontAwesomeIcon className='trashcan' icon={faTrashCan} 
                 style={{
-                    visibility: Checked ? 'visible' : 'hidden'
+                    visibility: props.checked ? 'visible' : 'hidden'
                 }}
             />
         </div>
