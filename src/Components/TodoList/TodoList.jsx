@@ -41,8 +41,19 @@ export default function TodoList() {
         }
         setItems(result)
     }
-    console.log(items)
-    const ListItems = items ? items.map((item) => <TodoListItem todoid={item.id} onClick={handleCheckEvent} name={item.name} checked={item.checked} key={item.id}></TodoListItem>) : null
+    
+    const handleDelete = (todoid) => {
+        const DeleteResult = [];
+        for (let i = 0; i < items.length; i++) {
+            if (items[i].id !== todoid) {
+                DeleteResult.push({
+                    ...items[i]
+                })
+            }
+        }
+        setItems(DeleteResult)
+    }
+    const ListItems = items ? items.map((item) => <TodoListItem todoid={item.id} onChange={handleDelete} onClick={handleCheckEvent} name={item.name} checked={item.checked} key={item.id}></TodoListItem>) : null
     
     return (
         <div className='todo-list'>           

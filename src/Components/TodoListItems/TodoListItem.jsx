@@ -15,7 +15,7 @@ export default function TodoListItem(props) {
                     }}
                 />
             </div>
-            <FontAwesomeIcon className='trashcan' icon={faTrashCan} 
+            <FontAwesomeIcon className='trashcan' icon={faTrashCan} onClick={() => props.onChange(props.todoid)}
                 style={{
                     visibility: props.checked ? 'visible' : 'hidden'
                 }}
