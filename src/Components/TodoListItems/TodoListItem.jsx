@@ -8,7 +8,7 @@ export default function TodoListItem(props) {
     return (
         <div className='todo-list-item'>
             <div className='todo-list-item-right'>
-                <Checkbox className='checkbox' onClick={props.onClick} checked={props.checked}/>
+                <Checkbox className='checkbox' onClick={props.onClick} checked={props.checked} todoid={props.todoid}/>
                 <TodoListItemText onClick={props.onClick} name={props.name}
                     style={{
                         textDecoration: props.checked ? 'line-through' : 'none'

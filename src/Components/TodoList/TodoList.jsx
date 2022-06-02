@@ -13,7 +13,7 @@ export default function TodoList() {
             name: 'Send wireframes',
             id: 2
         },
-        {   checked: true,
+        {   checked: false,
             name: 'Readibility About page',
             id: 3
         },
@@ -22,17 +22,31 @@ export default function TodoList() {
             id: 4
         }
     ])
+
+    const handleCheckEvent = (todoid) => {
+        const result = [];
+
+        for (let i = 0; i < items.length; i++) {
+           if (items[i].id !== todoid) {
+               result.push({
+                   ...items[i]
+               })       
+           }
+           else {
+               result.push({
+                    ...items[i],
+                    checked: !items[i].checked
+               })
+           }
+        }
+        setItems(result)
+    }
     console.log(items)
-        const ListItems = items.map((item) => <TodoListItem name={item.name} checked={item.checked}></TodoListItem>)
+    const ListItems = items ? items.map((item) => <TodoListItem todoid={item.id} onClick={handleCheckEvent} name={item.name} checked={item.checked} key={item.id}></TodoListItem>) : null
     
     return (
-        <div className='todo-list'>
-            
+        <div className='todo-list'>           
             {ListItems}
-            {/* <TodoListItem name='Styleguide creation' checked={true}/>   
-            <TodoListItem name='Send wireframes' checked={false} />   
-            <TodoListItem name='Readibility About page' checked={true}/>   
-            <TodoListItem name='Check color contrast' checked={false}/>    */}
             <div className='button-container'>
                 <NewTaskButton />
             </div>
