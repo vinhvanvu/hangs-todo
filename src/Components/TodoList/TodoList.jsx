@@ -10,6 +10,9 @@ export default function TodoList() {
 
     const [userInput, setInput] = useState('');
 
+    const [newTask, setNewTask] = useState(false);
+
+
     const handleCheckEvent = (todoid) => {
         const result = [];
 
@@ -51,12 +54,13 @@ export default function TodoList() {
                 id: Math.random() * 1000
             }
         ])
-        setInput('')
+        setInput('');
+        setNewTask(false);
     }
 
     const handleNewTaskClick = () => {
-        
-    }
+        setNewTask(true);
+    }     
 
     const ListItems = items ? items.map((item) => <TodoListItem todoid={item.id} onDelete={handleDelete} onCheck={handleCheckEvent} name={item.name} checked={item.checked} key={item.id}></TodoListItem>) : null
     
@@ -64,8 +68,8 @@ export default function TodoList() {
         <div className='todo-list'>           
             {ListItems}
             <div className='button-container'>
-                <Form setInput={setInput} onAdd={handleAdd} userInput={userInput}/>
-                {/* <NewTaskButton/> */}
+                {newTask ? <Form setInput={setInput} onAdd={handleAdd} userInput={userInput}/> : null}
+                <NewTaskButton onClick={handleNewTaskClick}/>
             </div>
         </div>
     )
